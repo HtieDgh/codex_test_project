@@ -3,7 +3,7 @@ using codex.Services;
 using Moq;
 using test.Helpers;
 
-namespace test
+namespace test.Unit
 {
     public class SumAnalyticsServiceShould
     {
@@ -93,6 +93,44 @@ namespace test
             service.Run();
 
             //Assert
+            Assert.Equal(expectedOutput.Count, actualOutput.Count);
+            foreach (var category in expectedOutput)
+            {
+                Assert.Contains(category, actualOutput);
+            }
+        }
+        [Fact]
+        public async Task ReturnCorrectOnValid_Async()
+        {
+            var mockStreamReader = new Mock<StreamReader>(Stream.Null);
+            var mockReader = new Mock<ICsvReader>(mockStreamReader.Object);
+            var mockSalesParser = new Mock<ISalesParser>(mockReader.Object);
+
+            mockSalesParser.Setup(x => x.GetAllAsync(It.IsAny<CancellationToken>()))
+                      .Returns(ProvideAsync_);
+
+            var actualOutput = new List<SumAnalyticsService.Category>();//Для получения вывода
+            var expectedOutput = new List<SumAnalyticsService.Category>()
+                {
+                    new SumAnalyticsService.Category("Electronics",937.08m),
+                    new SumAnalyticsService.Category("Clothing",992.24m),
+                    new SumAnalyticsService.Category("Beauty",714.98m)
+                };
+
+
+            var mockWriter = new Mock<IWriter>();
+            mockWriter.Setup(w => w.AddReport(It.IsAny<SumAnalyticsService.Report>()))
+                .Callback<SumAnalyticsService.Report>(report => actualOutput.AddRange(report.categories));//Полученный Report добавлять в actualOutput
+
+            var service = new SumAnalyticsService(mockWriter.Object, mockSalesParser.Object, IAnalyticsService.MODE.SYNCRONOUS, DateOnly.MinValue, DateOnly.MaxValue);
+
+            //Act
+            var task = service.RunAsync();
+
+            //Assert
+            var completed = await Task.WhenAny(task, Task.Delay(100));
+            Assert.Equal(task, completed); // Задача должна завершиться успешно 
+
             Assert.Equal(expectedOutput.Count, actualOutput.Count);
             foreach (var category in expectedOutput)
             {

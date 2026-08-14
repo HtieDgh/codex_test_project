@@ -11,6 +11,7 @@
 | └─ `Services.cd` | Диаграмма классов | Описание сервисов и классов обработки ввода/вывода |
 | `test/` | Тесты | Модульные тесты и вспомогательные классы |
 | ├─`Unit/` | Модульные тесты | Тестирование Бизнес-логики |
+| ├─`Integration/` | Интеграционные тесты | Проверка разрешения зависимостей |
 | └─`Helpers/` | Вспомогательные классы для тестирования |  |
 | `README.md` | Документация | Документация проекта |
 
@@ -164,3 +165,5 @@ Home: 164524,95
 * System.Text.Json
 * Microsoft.Extensions.DependencyInjection
 * [Fluent Command Line Parser](https://github.com/fclp/fluent-command-line-parser)
+
+В файле `./codex/Properties/launchSettings.json` описан запуск с аргументом `--help`. Если используется VisualStudio, то для проверки достаточно изменить аргументы командой строки в режиме сборки Debug проекта codex. Также можно передать аргументы, вызвав `./codex/bin/Debug/netX.X/codex.exe` после сборки. 

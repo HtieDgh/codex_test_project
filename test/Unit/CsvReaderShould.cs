@@ -1,7 +1,7 @@
 ﻿using codex.Services;
 using static codex.Services.CsvReader;
 
-namespace test
+namespace test.Unit
 {
     public class CsvReaderShould
     {
@@ -95,7 +95,7 @@ namespace test
             {
                 CsvReader r = new CsvReader(new StringReader(data), config);
 
-                foreach (var line in r.Read())  // ← Исключение здесь
+                foreach (var line in r.Read())  // < Исключение здесь
                 {
                     actualOutput.Add(line);
                 }
@@ -111,7 +111,7 @@ namespace test
 
             var e = Record.Exception(() =>
             {
-                CsvReader r = new CsvReader("path/to/file.txt");// ← Исключение здесь
+                CsvReader r = new CsvReader("path/to/file.txt");// < Исключение здесь
             });
 
             //Assert
@@ -124,7 +124,7 @@ namespace test
 
             var e = Record.Exception(() =>
             {
-                CsvReader r = new CsvReader("file.txt");// ← Исключение здесь
+                CsvReader r = new CsvReader("file.txt");// < Исключение здесь
             });
 
             //Assert

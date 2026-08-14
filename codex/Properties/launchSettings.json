@@ -2,7 +2,7 @@
   "profiles": {
     "codex --help": {
       "commandName": "Project",
-      "commandLineArgs": "-?"
+      "commandLineArgs": "--help"
     }
   }
 }

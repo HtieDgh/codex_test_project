@@ -3,7 +3,7 @@ using codex.Services;
 using Moq;
 using test.Helpers;
 
-namespace test
+namespace test.Unit
 {
     public class CustomerAnalyticsServiceShould
     {
@@ -93,12 +93,13 @@ namespace test
             //Assert
             Assert.Equal(expectedOutput, actualOutput);
         }
-/*        [Fact]
+        [Fact]
         public async Task ReturnCorrectOnValid_Async()
         {
             var mockStreamReader = new Mock<StreamReader>(Stream.Null);
             var mockReader = new Mock<ICsvReader>(mockStreamReader.Object);
             var mockSalesParser = new Mock<ISalesParser>(mockReader.Object);
+
             mockSalesParser.Setup(x => x.GetAllAsync(It.IsAny<CancellationToken>()))
                       .Returns(ProvideAsync_);
 
@@ -116,21 +117,17 @@ namespace test
             mockWriter.Setup(w => w.AddReport(It.IsAny<CustomerAnalyticsService.Report>()))
                 .Callback<CustomerAnalyticsService.Report>(report => actualOutput.AddRange(report.customers));//Полученный Report добавлять в actualOutput
 
-
             var service = new CustomerAnalyticsService(mockWriter.Object, mockSalesParser.Object, 5, IAnalyticsService.MODE.SYNCRONOUS, DateOnly.MinValue, DateOnly.MaxValue);
 
             //Act
-            var task = Task.Run(async () =>
-            {
-                return service.RunAsync();
-            });
-
+            var task = service.RunAsync();
+               
             //Assert
             var completed = await Task.WhenAny(task, Task.Delay(100));
             Assert.Equal(task, completed); // Задача должна завершиться успешно 
 
-            Assert.Equal(expectedOutput, actualOutput);
-        }*/
+            Assert.Equal(expectedOutput, actualOutput);// и ее вывод ожидаем
+        }
         [Theory]
         [MemberData(nameof(GetValidTestData))]
         public void ReturnCorrectOnValid_ParallelMode(List<Sale> data, DateOnly startDate, DateOnly endDate, List<CustomerAnalyticsService.Customer> expectedOutput)

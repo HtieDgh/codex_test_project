@@ -35,9 +35,7 @@ namespace codex.Shared
             if (services_ is null)
                 return;
 
-            foreach (var t in services_.Select(s => s.RunAsync(cancellation))) {
-                t.Wait();
-            }
+            Task.WaitAll(services_.Select(s => s.RunAsync(cancellation)));
         }
     }
 }
