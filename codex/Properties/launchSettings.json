@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "codex --help": {
+      "commandName": "Project",
+      "commandLineArgs": "-?"
+    }
+  }
+}

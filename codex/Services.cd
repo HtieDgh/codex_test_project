@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="codex.Services.ConsoleWriter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAgAAAAAAAAAAAAAAAIAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Services\ConsoleWriter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="codex.Services.CsvReader" Collapsed="true">
+    <Position X="10.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAAAAAAAAAgEAAAAACAgAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Services\CsvReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.CustomerAnalyticsService" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAI=</HashCode>
+      <FileName>Services\CustomerAnalyticsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.DeliveryAnalyticsService" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Services\DeliveryAnalyticsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.DiscountAnalyticsService" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Services\DiscountAnalyticsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.IAnalyticsService" Collapsed="true">
+    <Position X="13.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABAAAAAAAQAAAIAAAAAQAEACAAAI=</HashCode>
+      <FileName>Services\IAnalyticsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.ICsvReader" Collapsed="true">
+    <Position X="10.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAACAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ICsvReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="codex.Services.ISalesParser" Collapsed="true">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAABAAAAAAAAAAAAAACAAAAAAAAgAAgAEAAAAAAA=</HashCode>
+      <FileName>Services\ISalesParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.JSONWriter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAgAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAA=</HashCode>
+      <FileName>Services\JSONWriter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="codex.Services.MonthAnalyticsService" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Services\MonthAnalyticsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.SalesParser" Collapsed="true">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAABAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\SalesParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.SumAnalyticsService" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Services\SumAnalyticsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="codex.Services.TopAnalyticsService" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAI=</HashCode>
+      <FileName>Services\TopAnalyticsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="codex.Services.IReader" Collapsed="true">
+    <Position X="22" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="codex.Services.IWriter" Collapsed="true">
+    <Position X="23.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Services\IWriter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
